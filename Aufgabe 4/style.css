@@ -1,13 +1,77 @@
-a{
-    color: white;
-    background: black;
-    font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 10px;
-    text-decoration: none;
+.foto1 img{
+        display: block;
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        object-position: top center;
 }
-.logo {
-    width: 320px;
-    position: relative;
-    border: 5px solid red;
+
+body{
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 0px;
+        margin: 0px;
+}
+
+header{
+        background-color: black;
+        color: white;
+}
+
+.mitte{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+.centered{
+        position: absolute;
+        top: 8px;
+        right: 24px;
+        font-size: xx-large;
+        word-spacing: 1.5em;
+}
+
+a:link{
+        text-decoration: none;
+        color: white;
+}
+
+a:visited{
+        text-decoration: none;
+        color: white;
+}
+
+a:hover{
+        text-decoration: underline;
+        color: white;
+}
+
+a:active{
+        text-decoration: underline;
+        color: white;
+}
+
+nav{
+        text-align: center;
+}
+
+.überschrift{
+        font-size: 60px;
+}
+
+.footerbox{
+        background-color: rgb(182, 182, 182);
+        color: rgb(74, 73, 73);
+        width: 100;
+        height: 200px;
+        padding: 0;
+        text-align: center;
+}
+
+.spalte{
+        width:  400px;
+        height: 200px;
+        margin:  5px;
+        padding: 5px;
+        display: inline-block;
 }
