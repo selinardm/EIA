@@ -51,8 +51,9 @@ a:active{
         color: white;
 }
 
-nav{
+.inhalt{
         text-align: center;
+        padding:30px
 }
 
 .überschrift{
@@ -74,4 +75,8 @@ nav{
         margin:  5px;
         padding: 5px;
         display: inline-block;
+}
+
+div{
+        text-align: center;
 }
