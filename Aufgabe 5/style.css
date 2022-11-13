@@ -69,7 +69,7 @@
 #EIA{
         position: absolute;
         top: 8px;
-        left: 16px;
+        left: 200px;
 }
 
 body{
@@ -89,15 +89,15 @@ header{
         align-items: center;
 }
 
-.centered{
+.position{
         position: absolute;
         top: 8px;
-        right: 24px;
-        font-size: xx-large;
-        word-spacing: 1.5em;
+        right: 200px;
+        font-size: 30px;
+        word-spacing: 30px;
 }
 
-a:link{
+a{
         text-decoration: none;
         color: rgb(175, 175, 175);
 }
@@ -200,7 +200,7 @@ input[type=text], select, textarea {
         background-color: #45a049;
       }
       
-      .container1 {
+.container1 {
         border-radius: 5px;
         background-color: #f2f2f2;
         padding: 20px;
@@ -220,4 +220,35 @@ input[type=text], select, textarea {
 .aboutme{
         color: black;
         margin-bottom: 100px;
+}
+
+.centered{
+        position: absolute;
+        top: 8px;
+        right: 300px;
+        font-size: 30px;
+        word-spacing: 1cm;
+}
+
+.sticky{
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        width: 0px;
+        height: 0px;
+        -webkit-transform:rotate(360deg);
+        border-style: solid;
+        border-width: 0 200px 200px 0;
+        border-color: transparent #ff0000 transparent transparent;
+        opacity: 0.75;
+        
+}
+
+.stickyfont{
+        transform: rotate(45deg);
+        position: fixed;
+        top: 40px;
+        right: 0px;
+        font-size: 18px;
+        text-align: center;
 }
