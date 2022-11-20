@@ -1,3 +1,5 @@
+const x = 1;
+
 const de="Deutschland";
 const fr="Frankreich";
 const it="Italien";
