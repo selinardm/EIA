@@ -58,3 +58,45 @@ footer p {
     height: 75%;
     background: #ffcc00;
 }
+
+.styleeu{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffcc00;
+}
+
+
+.stylede{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 18.62%;
+    background: #ffcc00;
+}
+
+.stylefr{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 15.17%;
+    background: #ffcc00;
+}
+
+.styleit{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 13.21%;
+    background: #ffcc00;
+}
+
+.stylees{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10.61%;
+    background: #ffcc00;
+}
+
