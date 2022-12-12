@@ -88,3 +88,20 @@ img{
     box-shadow: 0 5px #003435, 0px 0px 40px 20px #00Ced1 ; 
     transform: translateY(4px);
 }
+
+.pausestyle{
+    width: 150px;
+    height: 150px;
+    background-color: white;
+}
+
+#Buttons{
+    color: #fff;
+    width: 300px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: auto;
+    text-align: center;
+    font-size: 60px;
+    padding: 20px;
+   }
