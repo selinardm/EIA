@@ -1,12 +1,12 @@
 body {
-    background-color:#ffffff;
     text-align: center;
+    background-color: #D1BC8A;
 }
 
 h1 {
     color: #ffffff;
     font-family: 'Dancing Script';
-    font-size: 40px;
+    font-size: 70px;
     height: 100px;
     margin: 0px;
     padding-top: 60px;
@@ -14,17 +14,16 @@ h1 {
 }
 
 h2 {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .wrapper {
     text-align: center;
     position: relative;
-    width: 800px;
+    width: 1600px;
     left: 50%;
-    height: 650px;
     transform: translateX(-50%);
-    background-color: #FFE4B4;
+    background-color: #D1BC8A;
 }
 
 .box {
