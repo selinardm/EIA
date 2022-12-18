@@ -1,0 +1,84 @@
+body {
+    background-color:#ffffff;
+    text-align: center;
+}
+
+h1 {
+    color: #ffffff;
+    font-family: 'Dancing Script';
+    font-size: 40px;
+    height: 100px;
+    margin: 0px;
+    padding-top: 60px;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.wrapper {
+    text-align: center;
+    position: relative;
+    width: 800px;
+    left: 50%;
+    height: 650px;
+    transform: translateX(-50%);
+    background-color: #FFE4B4;
+}
+
+.box {
+    background-size: cover;
+}
+
+#counterToDos {
+    color: rgb(255, 255, 255);
+}
+
+#toDo {
+    width: 400px;
+    height: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+
+.divLabel {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.todoItem {
+    padding: 20px;
+    align-items: center;
+    background-color: white;
+    width: 364px;
+    height: 30px;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    border-style: solid;
+    border-color: rgb(99, 99, 99);
+    outline: none;
+}
+
+.fa-trash-alt {
+    opacity: 60%;
+    font-size: 20px;
+    color: rgb(99, 99, 99);
+    cursor: pointer;
+
+}
+
+.fa-trash-alt:hover {
+    cursor: pointer;
+    opacity: 100%;
+}
+
+.checkBox {
+    cursor: pointer;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
