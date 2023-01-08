@@ -7,7 +7,13 @@ body {
 }
 
 h1 {
-    font-family: 'Courier New', Courier, monospace;
+    color: #ffffff;
+    font-family: 'Dancing Script';
+    font-size: 70px;
+    height: 100px;
+    margin: 0px;
+    padding-top: 60px;
+    text-transform: uppercase;
 }
 
 #main {
@@ -17,8 +23,6 @@ h1 {
     flex-direction: column;
     font-family: 'Indie Flower', cursive;
     margin: 24px;
-    margin-left: 16%;
-    margin-right: 16%;
     background-color: #D1BC8A;
     border-radius: 16px;
     min-height: 720px;
@@ -26,7 +30,8 @@ h1 {
 }
 
 p {
-    font-size: 20px;
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 #ToDoList {
