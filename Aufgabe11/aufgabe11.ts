@@ -1,66 +1,92 @@
-interface Task {
-    name: string;
-    done: Boolean;
+interface Listpoint {
+    Text: string;
+    Checked: boolean;
 }
+let todopoint: Listpoint[] = [{
+    Text: "test1",
+    Checked: true
+},
+{
+    Text: "test2",
+    Checked: false
+}]
 
-const tasks = document.querySelectorAll("ToDoList");
+var inputDOMElement: HTMLInputElement;
+var addButtonDOMElement: HTMLElement;
+var todosDOMElement: HTMLElement;
+var counterDOMElement: HTMLElement;
 
-let input: HTMLInputElement = (document.getElementById("task-input") as HTMLInputElement);
+window.addEventListener("load", function (): void {
 
-
-
-let totaltasks: number = 0;
-
-
-function addTask() {
-
-   
-    let div: HTMLDivElement = document.createElement("div");
-    div.setAttribute("class", "task-item");
-
-    let checkbox: HTMLInputElement = document.createElement("input");
-    checkbox.type = "checkbox";
-    checkbox.setAttribute("class", "checkbox");
-
-
-    let title: HTMLDivElement = document.createElement("div");
-    title.setAttribute("class", "task-name");
-
-    let trash: HTMLElement = document.createElement("i");
-    trash.setAttribute("class", "far fa-trash-alt");
-
-    document.getElementById("ToDoList")?.appendChild(div);
-    div?.appendChild(checkbox);
-    div?.appendChild(title);
-    div?.appendChild(trash);
-    title.innerHTML = input.value;
-
-    trash.addEventListener("click", function (event: MouseEvent) {
-        console.log(event);
-        deleteTask(div);
-        totaltasks --;
-        TaskDisplay()
-    });
-}
-
-function deleteTask(div: HTMLElement) {
-    div.remove();
-}
-
-function TaskDisplay() {
-    document.getElementById("total-tasks").innerHTML = totaltasks.toFixed() + " tasks in total"; //tasklist.length + " in total"; (-> später, wenn der Array steht)
-}
+    inputDOMElement = document.querySelector("#inputfield");
+    addButtonDOMElement = document.querySelector("#addButton");
+    todosDOMElement = document.querySelector("#todos");
+    counterDOMElement = document.querySelector("#counter");
 
 
-input.addEventListener("keydown", function (event: KeyboardEvent): void {
-    if (event.code === "Enter") {
-        addTask();
-        input.value = "";
-        totaltasks ++;
-        TaskDisplay()
-    }
+    addButtonDOMElement.addEventListener("click", addTodo);
+
+
+    drawListToDOM();
 });
 
-for (let i=0; i<tasks.length; i++) {
-    document.querySelector(".checkbox")
+function drawListToDOM(): void {
+    todosDOMElement.innerHTML = "";
+
+    for (let index: number = 0; index < todopoint.length; index++) {
+
+
+        let todo: HTMLElement = document.createElement("div");
+        todo.classList.add("todo");
+
+
+        todo.innerHTML = "<span class='check " + todopoint[index].Checked + "'><i class='fas fa-check'></i></span>"
+            + todopoint[index].Text +
+            "<span class='trash fas fa-trash-alt'></span>";
+
+        todo.querySelector(".check").addEventListener("click", function (): void {
+            toggleCheckState(index);
+        });
+        todo.querySelector(".trash").addEventListener("click", function (): void {
+            deleteTodo(index);
+        });
+
+        todosDOMElement.appendChild(todo);
+    }
+    updateCounter();
+}
+const offen: number = 0;
+const notoff: number = 0;
+
+function updateCounter(): void {
+    counterDOMElement.innerHTML = "in total: " + todopoint.length + "<br>" + "to do: " + offen + "<br>" + "finished: " + notoff + "<br>";
+}
+
+function addTodo(): void {
+    if (inputDOMElement.value != "") {
+
+        let newtask = {
+            Text: inputDOMElement.value,
+            Checked: false
+        }
+        todopoint.unshift(newtask);
+
+        inputDOMElement.value = "";
+
+        drawListToDOM();
+    }
+}
+
+function toggleCheckState(index: number): void {
+
+    todopoint[index].Checked = !todopoint[index].Checked;
+    drawListToDOM();
+}
+
+
+function deleteTodo(index: number): void {
+
+    todopoint.splice(index, 1);
+
+    drawListToDOM();
 }
